@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lofoten Photography Road Trip</title>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body {
+  font-family: 'Prompt', sans-serif;
+  background: #0b1d2a;
+  color: #ffffff;
+  scroll-behavior: smooth;
+}
+header {
+  height:100vh;
+  background: url('https://upload.wikimedia.org/wikipedia/commons/6/65/Reine_Lofoten_2018.jpg') center/cover no-repeat;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  background-attachment: fixed;
+}
+header h1{
+  font-size:3rem;
+  background:rgba(0,0,0,0.5);
+  padding:20px 40px;
+  border-radius:20px;
+}
+header p{
+  margin-top:15px;
+  font-size:1.2rem;
+}
+section{
+  padding:80px 10%;
+}
+.day{
+  margin-bottom:100px;
+  opacity:0;
+  transform:translateY(60px);
+  transition:all 1s ease;
+}
+.day.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+.day img{
+  width:100%;
+  border-radius:20px;
+  margin-bottom:20px;
+}
+h2{
+  font-size:2rem;
+  margin-bottom:15px;
+  color:#7dd3fc;
+}
+ul{
+  line-height:1.8;
+  margin-bottom:20px;
+}
+a.button{
+  display:inline-block;
+  padding:10px 20px;
+  background:#facc15;
+  color:#000;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:600;
+}
+iframe{
+  width:100%;
+  height:350px;
+  border-radius:20px;
+  margin-top:20px;
+}
+footer{
+  text-align:center;
+  padding:40px;
+  background:#07121a;
+}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Lofoten Photography Road Trip</h1>
+<p>29 May – 7 June 2026 | Midnight Sun Edition</p>
+</header>
+
+<section>
+
+<div class="day">
+<h2>Day 1–2: Svolvær & Henningsvær</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Svolv%C3%A6r_Lofoten.jpg" alt="Svolvær">
+<ul>
+<li>Arrival at Evenes Airport</li>
+<li>Drive 2.5–3 hrs to Svolvær</li>
+<li>Midnight Sun at harbour</li>
+<li>Henningsvær football field & marina</li>
+</ul>
+<a class="button" target="_blank" href="https://www.google.com/maps/place/Svolv%C3%A6r">Open Svolvær in Google Maps</a>
+<iframe src="https://www.google.com/maps?q=Svolv%C3%A6r&output=embed"></iframe>
+</div>
+
+<div class="day">
+<h2>Day 3: Uttakleiv & Haukland Beach</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Uttakleiv_beach_Lofoten.jpg" alt="Uttakleiv Beach">
+<ul>
+<li>Easy beach walk</li>
+<li>Rock foreground photography</li>
+<li>Golden hour reflections</li>
+</ul>
+<a class="button" target="_blank" href="https://www.google.com/maps/place/Uttakleiv+Beach">Open Uttakleiv in Google Maps</a>
+<iframe src="https://www.google.com/maps?q=Uttakleiv+Beach&output=embed"></iframe>
+</div>
+
+<div class="day">
+<h2>Day 4–5: Reine & Hamnøy</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/65/Reine_Lofoten_2018.jpg" alt="Reine">
+<ul>
+<li>Hamnøy bridge classic view</li>
+<li>Å village walk</li>
+<li>Sakrisøy yellow cabins</li>
+<li>Midnight sun harbour photography</li>
+</ul>
+<a class="button" target="_blank" href="https://www.google.com/maps/place/Reine">Open Reine in Google Maps</a>
+<iframe src="https://www.google.com/maps?q=Reine,Lofoten&output=embed"></iframe>
+</div>
+
+<div class="day">
+<h2>Day 6–7: Ramberg & Nusfjord</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/Ramberg_Lofoten.jpg" alt="Ramberg Beach">
+<ul>
+<li>Soft sand beach compositions</li>
+<li>Historic fishing village Nusfjord</li>
+<li>Scenic drive on E10</li>
+</ul>
+<a class="button" target="_blank" href="https://www.google.com/maps/place/Ramberg">Open Ramberg in Google Maps</a>
+<iframe src="https://www.google.com/maps?q=Ramberg,Lofoten&output=embed"></iframe>
+</div>
+
+<div class="day">
+<h2>Final Night: Return to Evenes</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/E10_Lofoten.jpg" alt="E10 Scenic Road">
+<ul>
+<li>Revisit best light locations</li>
+<li>Drive back to Evenes</li>
+<li>Overnight near airport for 07:40 departure</li>
+</ul>
+<a class="button" target="_blank" href="https://www.google.com/maps/place/Harstad%2FNarvik+Airport,+Evenes">Open Evenes Airport</a>
+<iframe src="https://www.google.com/maps?q=Harstad/Narvik+Airport,+Evenes&output=embed"></iframe>
+</div>
+
+</section>
+
+<footer>
+<p>Interactive Photography Road Trip Guide | Designed for Midnight Sun</p>
+</footer>
+
+<script>
+const days = document.querySelectorAll('.day');
+window.addEventListener('scroll', () => {
+  days.forEach(day => {
+    const rect = day.getBoundingClientRect();
+    if(rect.top < window.innerHeight - 100){
+      day.classList.add('visible');
+    }
+  });
+});
+</script>
+
+</body>
+</html>
